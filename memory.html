@@ -1,0 +1,85 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Memory game</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="./memory.css">
+  
+  </head>
+
+  <body>
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]--> 
+    <a href="#a11y-instructions" class="hidden">Memory game. Skip to instructions</a>
+
+    <p id="a11y-alerts" class="hidden" role="alert"></p>
+    <h1>Memory Game</h1>
+    <p>This game is like the memory game from your childhood, but with a twist.
+      It is compatible with screen readers. You can test your verbal and spatial memory by using the arrow keys to navigate 
+      and listen to what is on the other side of the cards, and try to make matches.
+    </p>
+
+    <div  >
+      <p>You can either use your mouse, or keyboard.</p> 
+      <ul>
+        <li>Select a color palette from the drop down menu. </li>
+        <li>Click the button Load Cards and the 60 seconds countdown will start.</li>
+        <li>Click the cards, 2 at a time, to reveal the color. Look for paris of 2, that both have the same color. There are 8 pairs.</li>
+        <li>Click the Start over button if you'd like to start over before the current game ends.</li>
+      </ul>
+    </div>
+    <div tabindex='0' id="a11y-instructions" class="hidden">
+      <ul>
+        <li>Use the tab key to navigate the game settings and the game board. It is a 4 by 4 board. 
+        <li>Choose a color palette from the drop down menu by pressing the up or down arrow keys. </li>
+        <li>Press the enter key to click the button Load Cards and the 60 seconds countdown will start.</li>
+        <li>Press the tab key to enter the game board.
+        <li>Press the arrow keys or tab and shift-tab to navigate the board. When you come to a card, that card's color will be spoken. 
+        <li>Press the enter or space key to flip over the card. Listen for pairs of 2, that both have the same color. There are 8 pairs.</li>
+        <li>You will hear a notice when you have 30 seconds left.</li>
+        <li>Tab back to the Start over button if you'd like to start over before the current game ends. Otherwise, when you win or the countdown runs down, you will be left at the dropdown menu to choose a new color palette again.</li>
+      </ul>
+    </div>
+    <form> 
+      <div>
+        <label for="hiddenstyle-select">Choose a color palette:</label>
+        <select name="cards" id="hiddenstyle-select">
+          <option value="COLORBLIND1">Colorblind Friendly Option 1</option>
+          <option value="COLORBLIND2">Colorblind Friendly Option 2</option>
+          <option value="PINKS">Pinks</option>
+          <option value="REDS">Reds</option>
+          <option value="ORANGES">Oranges</option>
+          <option value="YELLOWS">Yellows</option>
+          <option value="GREENS">Greens</option>
+          <option value="BLUES">Blues</option>
+          <option value="PURPLES">Purples</option>
+          <option value="WHITES">Whites</option>
+          <option value="GREYS">Greys (advanced)</option>
+        </select>
+      </div>
+
+      <div>
+        <button id="newGame-btn" disabled>New game</button>
+
+        <button id="loadCards-btn" aria-label="Load cards & start game, 60 seconds starts now">Load cards & start game</button>
+        <div id="countdown"><span id="num"></span><span id="text"> seconds remaining</span></div>
+      </div>
+    </form>
+
+    <div id="container">
+  
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script src="./memory.js"></script>
+  </body>
+</html>

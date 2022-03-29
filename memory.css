@@ -1,0 +1,40 @@
+#container {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap:wrap;
+    align-content: center;
+    max-width:500px;
+    margin:auto;
+}
+
+.card {
+    width:100px;
+    height:100px;
+    cursor: pointer;
+    margin:5px;
+    box-sizing: border-box;
+}
+
+.card:focus {
+    outline: 2px dashed black;
+
+}
+
+.card.color-showing {
+    cursor: default;
+}
+
+.color-hidden {
+    background-color: lightgrey;
+}
+
+.hidden {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
